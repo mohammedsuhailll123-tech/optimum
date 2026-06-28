@@ -1,0 +1,113 @@
+---
+// Certifications.astro
+const certifications = [
+  {
+    title: "Responsive Web Design",
+    issuer: "freeCodeCamp / W3C",
+    status: "Planned",
+    color: "from-blue-500/20 via-teal-500/10 to-transparent",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25" /></svg>`
+  },
+  {
+    title: "JavaScript Programming",
+    issuer: "MDN Academy / Udemy",
+    status: "Planned",
+    color: "from-yellow-500/20 via-amber-500/10 to-transparent",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-yellow-600"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" /></svg>`
+  },
+  {
+    title: "Full Stack Development",
+    issuer: "Udemy / Meta Cert",
+    status: "Planned",
+    color: "from-purple-500/20 via-pink-500/10 to-transparent",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-purple-500"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9s2.015-9 4.5-9yM12 3a9.004 9.004 0 0 1 8.716 6.747M12 3a9.004 9.004 0 0 0-8.716 6.747" /></svg>`
+  },
+  {
+    title: "React Framework",
+    issuer: "Meta / Frontend Masters",
+    status: "Planned",
+    color: "from-cyan-500/20 via-blue-500/10 to-transparent",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-cyan-500"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 21m0 0-.766-3.447m.766 3.447h2.625M17.188 15.904 18 21m0 0-.766-3.447m.766 3.447h-2.625M10.025 8h3.95M9.18 12h5.64M12 3v5m0 0-3 3m3-3 3 3" /></svg>`
+  },
+  {
+    title: "Node.js System Design",
+    issuer: "OpenJS Foundation",
+    status: "Planned",
+    color: "from-green-500/20 via-emerald-500/10 to-transparent",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-green-600"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 14.25h13.5m-13.5 0a3 3 0 0 1-3-3m3 3a3 3 0 1 0 0 6h13.5a3 3 0 1 0 0-6m-16.5-3a3 3 0 0 1 3-3h13.5a3 3 0 0 1 3 3m-19.5 0a3 3 0 0 1 3-3M6.75 6.75h.008v.008H6.75V6.75Zm.008 1.5h-.008V8.25h.008v.008Z" /></svg>`
+  },
+  {
+    title: "Cloud Deployment",
+    issuer: "AWS / Vercel Academic",
+    status: "Planned",
+    color: "from-orange-500/20 via-red-500/10 to-transparent",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-orange-500"><path stroke-linecap="round" stroke-linejoin="round" d="M12 16.5V9.75m0 0 3 3m-3-3-3 3M6.75 19.5a4.5 4.5 0 0 1-1.41-8.775 5.25 5.25 0 0 1 10.233-2.33 3 3 0 0 1 3.758 3.848A3.752 3.752 0 0 1 18 19.5H6.75Z" /></svg>`
+  }
+];
+---
+
+<section id="certifications" class="py-24 bg-canvas border-b border-hairline relative">
+  
+  <!-- Ambient slow-shift gradient for backdrop details -->
+  <div class="absolute inset-0 pointer-events-none opacity-5 select-none">
+    <div class="absolute top-1/2 left-1/4 w-80 h-80 rounded-full bg-gradient-preview-start blur-3xl"></div>
+  </div>
+
+  <div class="max-w-[1400px] mx-auto px-4 md:px-6 relative z-10">
+    
+    <!-- Section Header -->
+    <div class="max-w-[700px] mb-16">
+      <p class="caption-mono text-link mb-3 tracking-widest font-semibold">Credentials</p>
+      <h2 class="display-lg text-3xl md:text-4xl text-ink leading-tight mb-4">
+        Certifications & Certs.
+      </h2>
+      <p class="font-sans text-body text-base md:text-lg">
+        Upcoming educational certifications and badges planned to validate full-stack web and cloud capabilities.
+      </p>
+    </div>
+
+    <!-- Credentials Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+      {certifications.map((cert) => (
+        <div class="bg-canvas border border-hairline hover:border-hairline-strong/50 rounded-lg p-6 flex flex-col justify-between shadow-level-2 hover:shadow-level-3 hover:-translate-y-1.5 transition-all duration-300 relative group overflow-hidden">
+          
+          <!-- Colored background radial blob on hover -->
+          <div class={`absolute inset-0 bg-gradient-to-tr ${cert.color} opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none`}></div>
+          
+          <div class="relative z-10">
+            <!-- Icon and tag -->
+            <div class="flex items-center justify-between mb-4">
+              <span class="p-2 bg-canvas-soft-2 border border-hairline/60 rounded-md group-hover:scale-105 transition-transform inline-block">
+                <Fragment set:html={cert.icon} />
+              </span>
+              
+              <span class="font-mono text-[9px] font-semibold text-mute bg-canvas-soft border border-hairline px-2 py-0.5 rounded-sm">
+                {cert.status}
+              </span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="font-sans font-semibold text-base text-ink mb-1 group-hover:text-primary transition-colors">
+              {cert.title}
+            </h3>
+
+            <!-- Issuer -->
+            <p class="font-sans text-mute text-xs mb-4">
+              {cert.issuer}
+            </p>
+          </div>
+
+          <!-- Decorative hairline signature -->
+          <div class="pt-4 border-t border-hairline/50 mt-auto relative z-10 flex items-center justify-between">
+            <span class="caption-mono text-[8px] text-mute tracking-wider font-semibold">Planned Verification</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-3.5 h-3.5 text-mute/50 group-hover:text-link group-hover:translate-x-0.5 transition-all">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+            </svg>
+          </div>
+
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

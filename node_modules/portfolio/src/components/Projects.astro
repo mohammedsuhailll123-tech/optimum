@@ -1,0 +1,275 @@
+---
+// Projects.astro
+const featuredProject = {
+  title: "SM Estates – Real Estate Website",
+  description: "Designed and developed a modern real estate website with a responsive user interface, property listings, property details, inquiry forms, admin dashboard, and fast performance. The website is fully mobile-friendly and deployed on Vercel.",
+  liveUrl: "https://sm-estate-ten.vercel.app",
+  repoUrl: "https://github.com/mohammedsuhailll123-tech/realestate",
+  tech: ["Astro", "Tailwind CSS", "JavaScript", "TypeScript", "Supabase", "Git & GitHub", "Vercel"],
+  features: ["Responsive Design", "Property Listings", "Admin Dashboard", "Contact Form", "Fast Loading", "SEO Optimized"]
+};
+
+const placeholders = [
+  {
+    title: "Restaurant Website",
+    description: "Modern dining booking platform featuring menu showcases, table reservation calendar, and kitchen management dashboard.",
+    upcomingTech: ["Astro", "Tailwind CSS", "React", "Hono API"],
+    icon: "🍽️",
+    accent: "from-orange-500/10 to-amber-500/10 hover:border-orange-500/30",
+    whatsappUrl: "https://wa.me/919036024148?text=Hi%20Mohammed%20Suhail,%0A%0AI%20am%20interested%20in%20developing%20a%20modern%20Restaurant%20Website%20for%20my%20business.%0A%0APlease%20contact%20me.%0A%0AName:%0APhone:%0ABusiness%20Name:"
+  },
+  {
+    title: "Hospital Website",
+    description: "Clinical patient portal supporting specialist appointment scheduling, medical record access, and virtual triage.",
+    upcomingTech: ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL"],
+    icon: "🏥",
+    accent: "from-blue-500/10 to-cyan-500/10 hover:border-blue-500/30",
+    whatsappUrl: "https://wa.me/919036024148?text=Hi%20Mohammed%20Suhail,%0A%0AI%20am%20interested%20in%20developing%20a%20modern%20Hospital%20Website%20for%20my%20healthcare%20center.%0A%0APlease%20contact%20me.%0A%0AName:%0APhone:%0AOrganization:"
+  },
+  {
+    title: "Gym Website",
+    description: "Fitness coaching platform hosting trainer booking grids, member subscription tiers, and workout log dashboards.",
+    upcomingTech: ["Astro", "Tailwind CSS", "JavaScript", "Supabase"],
+    icon: "💪",
+    accent: "from-red-500/10 to-orange-500/10 hover:border-red-500/30",
+    whatsappUrl: "https://wa.me/919036024148?text=Hi%20Mohammed%20Suhail,%0A%0AI%20am%20interested%20in%20developing%20a%20modern%20Gym%20Website%20for%20my%20fitness%20center.%0A%0APlease%20contact%20me.%0A%0AName:%0APhone:%0AGym%20Name:"
+  },
+  {
+    title: "School Website",
+    description: "Academic portal with class timetable grids, student grades database, fee payment systems, and circular notices.",
+    upcomingTech: ["React", "TypeScript", "Node.js", "MongoDB"],
+    icon: "🏫",
+    accent: "from-indigo-500/10 to-purple-500/10 hover:border-indigo-500/30",
+    whatsappUrl: "https://wa.me/919036024148?text=Hi%20Mohammed%20Suhail,%0A%0AI%20am%20interested%20in%20developing%20a%20modern%20School%20Website%20for%20my%20institution.%0A%0APlease%20contact%20me.%0A%0AName:%0APhone:%0AOrganization:"
+  },
+  {
+    title: "Travel Website",
+    description: "Immersive booking experience showcasing dynamic holiday packages, interactive maps, and weather forecast APIs.",
+    upcomingTech: ["Astro", "Tailwind CSS", "Supabase", "MapBox API"],
+    icon: "✈️",
+    accent: "from-teal-500/10 to-emerald-500/10 hover:border-teal-500/30",
+    whatsappUrl: "https://wa.me/919036024148?text=Hi%20Mohammed%20Suhail,%0A%0AI%20am%20interested%20in%20developing%20a%20modern%20Travel%20Website%20for%20my%20agency.%0A%0APlease%20contact%20me.%0A%0AName:%0APhone:%0AAgency%20Name:"
+  },
+  {
+    title: "E-commerce Website",
+    description: "High-performance store with search filtering, shopping cart drawer, Stripe payments, and admin order tracking.",
+    upcomingTech: ["Astro", "React", "Tailwind CSS", "Stripe API"],
+    icon: "🛒",
+    accent: "from-pink-500/10 to-rose-500/10 hover:border-pink-500/30",
+    whatsappUrl: "https://wa.me/919036024148?text=Hi%20Mohammed%20Suhail,%0A%0AI%20am%20interested%20in%20developing%20a%20modern%20E-commerce%20Website%20for%20my%20online%20store.%0A%0APlease%20contact%20me.%0A%0AName:%0APhone:%0AStore%20Name:"
+  }
+];
+---
+
+<section id="projects" class="py-24 bg-canvas border-b border-hairline relative">
+  <div class="max-w-[1400px] mx-auto px-4 md:px-6">
+    
+    <!-- Section Header -->
+    <div class="max-w-[700px] mb-16">
+      <p class="caption-mono text-link mb-3 tracking-widest font-semibold">Projects</p>
+      <h2 class="display-lg text-3xl md:text-4xl text-ink leading-tight mb-4">
+        My engineering works.
+      </h2>
+      <p class="font-sans text-body text-base md:text-lg">
+        Explore a live production web application and concepts planned for development. Focused on premium UI, animations, and speed.
+      </p>
+    </div>
+
+    <!-- Featured Project (Full-Width layout) -->
+    <div class="mb-16">
+      <div class="bg-canvas border border-hairline hover:border-hairline-strong/60 rounded-lg overflow-hidden grid grid-cols-1 lg:grid-cols-12 shadow-level-3 hover:shadow-level-4 transition-all duration-500 group">
+        
+        <!-- Live Real Estate Website Graphic Mockup (Left 5 Cols) -->
+        <div class="lg:col-span-5 bg-canvas-soft-2 border-b lg:border-b-0 lg:border-r border-hairline p-6 sm:p-10 flex flex-col justify-center items-center relative overflow-hidden select-none min-h-[300px]">
+          <!-- Ambient soft gradient behind -->
+          <div class="absolute inset-0 bg-gradient-to-tr from-cyan-500/5 to-indigo-500/5 pointer-events-none"></div>
+          
+          <!-- Mockup Frame -->
+          <div class="w-full max-w-[340px] bg-canvas border border-hairline rounded-md shadow-level-2 overflow-hidden transition-transform duration-500 group-hover:scale-[1.03] group-hover:-translate-y-1 z-10 flex flex-col">
+            <!-- Header bar -->
+            <div class="bg-canvas-soft border-b border-hairline h-8 px-3 flex items-center justify-between">
+              <div class="flex items-center gap-1">
+                <span class="w-2 h-2 rounded-full bg-red-400"></span>
+                <span class="w-2 h-2 rounded-full bg-yellow-400"></span>
+                <span class="w-2 h-2 rounded-full bg-green-400"></span>
+              </div>
+              <span class="font-mono text-[9px] text-mute font-medium">sm-estate-ten.vercel.app</span>
+              <div class="w-4"></div>
+            </div>
+            
+            <!-- Landing page body mockup -->
+            <div class="p-4 space-y-4">
+              <!-- Hero section in card -->
+              <div class="space-y-1 text-center py-2">
+                <div class="font-sans font-bold text-xs text-ink tracking-tight">Luxury Residences</div>
+                <div class="font-sans text-[7px] text-mute">Find your dream premium home today</div>
+              </div>
+              
+              <!-- Property Search Bar Mockup -->
+              <div class="border border-hairline rounded-sm h-6 px-2 flex items-center justify-between bg-canvas-soft-2">
+                <span class="text-[7px] text-mute">Search location...</span>
+                <span class="w-3 h-3 rounded-full bg-primary flex items-center justify-center text-on-primary text-[6px]">🔍</span>
+              </div>
+
+              <!-- Property listing thumbnail grid inside card -->
+              <div class="grid grid-cols-2 gap-2">
+                <div class="border border-hairline rounded-sm overflow-hidden flex flex-col">
+                  <div class="h-12 bg-gradient-to-tr from-neutral-200 to-neutral-100 flex items-center justify-center text-[10px]">🏠</div>
+                  <div class="p-1.5 space-y-0.5">
+                    <div class="font-sans font-semibold text-[7px] text-ink">Villa Grande</div>
+                    <div class="font-mono text-[6px] text-link">$1,200,000</div>
+                  </div>
+                </div>
+                <div class="border border-hairline rounded-sm overflow-hidden flex flex-col">
+                  <div class="h-12 bg-gradient-to-tr from-neutral-200 to-neutral-100 flex items-center justify-center text-[10px]">🏢</div>
+                  <div class="p-1.5 space-y-0.5">
+                    <div class="font-sans font-semibold text-[7px] text-ink">Urban Loft</div>
+                    <div class="font-mono text-[6px] text-link">$450,000</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Featured Project Details (Right 7 Cols) -->
+        <div class="lg:col-span-7 p-8 sm:p-10 flex flex-col justify-between">
+          
+          <div>
+            <!-- Badge -->
+            <div class="inline-flex items-center gap-1.5 bg-link/10 border border-link/20 rounded-full px-2.5 py-0.5 mb-4 shadow-sm">
+              <span class="w-1.5 h-1.5 rounded-full bg-link animate-pulse"></span>
+              <span class="caption-mono text-link text-[10px] font-bold tracking-wider">Featured Project</span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="display-md text-2xl sm:text-3xl text-ink font-semibold mb-4 leading-tight">
+              {featuredProject.title}
+            </h3>
+
+            <!-- Description -->
+            <p class="font-sans text-body text-sm sm:text-base leading-relaxed mb-6">
+              {featuredProject.description}
+            </p>
+
+            <!-- Features Grid -->
+            <div class="mb-8">
+              <h4 class="caption-mono text-ink text-[10px] font-bold tracking-wider mb-3">Key Features</h4>
+              <div class="grid grid-cols-2 gap-y-2 gap-x-4">
+                {featuredProject.features.map(feat => (
+                  <div class="flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-3.5 h-3.5 text-link">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                    </svg>
+                    <span class="font-sans text-xs text-body font-medium">{feat}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <!-- Footer Tech Stack & Action Buttons -->
+          <div class="space-y-6 pt-6 border-t border-hairline mt-auto">
+            <!-- Tech badges -->
+            <div class="flex flex-wrap gap-1.5">
+              {featuredProject.tech.map((t) => (
+                <span class="font-mono text-[9px] text-body bg-canvas-soft border border-hairline px-2 py-0.5 rounded-sm">
+                  {t}
+                </span>
+              ))}
+            </div>
+
+            <!-- Buttons -->
+            <div class="flex flex-wrap gap-3">
+              <a 
+                href={featuredProject.liveUrl} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="inline-flex items-center justify-center bg-primary text-on-primary hover:bg-primary/95 text-xs font-semibold rounded-full px-5 py-2.5 transition-all shadow-level-2 active:scale-95"
+              >
+                Live Demo
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-3 h-3 ml-1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                </svg>
+              </a>
+              {featuredProject.repoUrl && (
+                <a 
+                  href={featuredProject.repoUrl} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  class="inline-flex items-center justify-center bg-canvas hover:bg-canvas-soft-2 text-ink text-xs font-semibold rounded-full border border-hairline px-5 py-2.5 transition-all shadow-level-1 active:scale-95"
+                >
+                  Source Code
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="ml-1.5" viewBox="0 0 16 16">
+                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                  </svg>
+                </a>
+              )}
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Future Project Placeholders Header -->
+    <div class="mb-8">
+      <h3 class="caption-mono text-mute text-[11px] font-bold tracking-wider">Upcoming & Future Builds</h3>
+    </div>
+
+    <!-- 3-Column Grid for Placeholders -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+      {placeholders.map((proj) => (
+        <div class={`bg-canvas border border-hairline rounded-lg p-6 flex flex-col justify-between relative overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:shadow-level-3 group bg-gradient-to-br ${proj.accent}`}>
+          
+          <div>
+            <!-- Icon & Status -->
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-2xl filter drop-shadow-sm group-hover:scale-110 transition-transform">{proj.icon}</span>
+              <span class="font-mono text-[9px] font-semibold text-mute bg-canvas-soft border border-hairline/80 px-2 py-0.5 rounded-sm">
+                Planned
+              </span>
+            </div>
+
+            <!-- Title -->
+            <h4 class="font-sans font-semibold text-base text-ink mb-2 transition-colors group-hover:text-primary">
+              {proj.title}
+            </h4>
+
+            <!-- Description -->
+            <p class="font-sans text-body text-xs leading-relaxed mb-5">
+              {proj.description}
+            </p>
+
+            <!-- Request Button -->
+            <div class="mb-5">
+              <a 
+                href={proj.whatsappUrl} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="inline-flex items-center justify-center bg-canvas hover:bg-canvas-soft border border-hairline hover:border-hairline-strong text-ink text-[11px] font-semibold rounded-full px-4 py-2 transition-all w-full shadow-sm hover:scale-[1.02] active:scale-95 cursor-pointer text-center"
+              >
+                Request This Website
+                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="currentColor" class="ml-1.5 text-mute group-hover:text-primary transition-colors" viewBox="0 0 16 16">
+                  <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.977h.004c4.403 0 8.062-3.557 8.066-7.93A7.98 7.98 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.69-4.98c-.202-.12-1.19-.613-1.37-.674-.18-.063-.31-.097-.44.097-.13.197-.502.674-.618.81-.115.135-.23.149-.43.03a6.072 6.072 0 0 1-1.61-1.006a6.262 6.262 0 0 1-1.11-1.386c-.115-.197-.012-.303.088-.403.09-.09.2-.23.3-.346.09-.115.12-.197.18-.328.06-.13.03-.245-.015-.346-.045-.1-.44-1.1-.6-1.485-.156-.388-.314-.335-.44-.335-.115-.005-.25-.005-.385-.005-.137 0-.36.052-.55.258-.19.207-.73.714-.73 1.745s.75 2.023.85 2.16c.1.135 1.47 2.35 3.61 3.226.51.21 1.07.337 1.44.385.506.05 1.01.029 1.39-.029.42-.06 1.19-.502 1.36-.983.17-.48.17-.89.12-.983-.05-.09-.18-.12-.38-.24z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Planned tech tags -->
+          <div class="flex flex-wrap gap-1.5 pt-4 border-t border-hairline/50 mt-auto">
+            {proj.upcomingTech.map((tech) => (
+              <span class="font-mono text-[8px] text-mute bg-canvas/70 px-1.5 py-0.5 rounded-sm border border-hairline/40">
+                {tech}
+              </span>
+            ))}
+          </div>
+
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

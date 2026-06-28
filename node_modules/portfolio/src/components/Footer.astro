@@ -1,0 +1,82 @@
+---
+// Footer.astro
+const year = new Date().getFullYear();
+---
+
+<footer class="bg-canvas border-t border-hairline py-16 lg:py-24">
+  <div class="max-w-[1400px] w-full mx-auto px-4 md:px-6">
+    
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-10 lg:gap-16 mb-16">
+      
+      <!-- Monogram & Brand -->
+      <div class="flex flex-col gap-4">
+        <div class="flex items-center gap-2">
+          <span class="font-mono font-bold text-primary text-sm tracking-tight flex items-center justify-center bg-canvas-soft border border-hairline px-2 py-0.5 rounded-sm shadow-sm">
+            &lt;/&gt;
+          </span>
+          <span class="font-sans font-bold text-sm tracking-tight text-ink">
+            suhailll.dev
+          </span>
+        </div>
+        <p class="font-sans text-body text-xs leading-relaxed max-w-[240px]">
+          Designed & Developed by Mohammed Suhail
+        </p>
+      </div>
+
+      <!-- Navigation Column -->
+      <div class="flex flex-col gap-3">
+        <span class="caption-mono text-mute text-[10px] font-bold tracking-wider">Navigation</span>
+        <a href="#projects" class="font-sans text-body hover:text-ink text-xs transition-colors">Projects</a>
+        <a href="#experience" class="font-sans text-body hover:text-ink text-xs transition-colors">Experience</a>
+        <a href="#skills" class="font-sans text-body hover:text-ink text-xs transition-colors">Skills</a>
+        <a href="#contact" class="font-sans text-body hover:text-ink text-xs transition-colors">Contact</a>
+      </div>
+
+      <!-- Socials Column -->
+      <div class="flex flex-col gap-3">
+        <span class="caption-mono text-mute text-[10px] font-bold tracking-wider">Socials</span>
+        <a href="https://github.com/mohammedsuhailll123-tech" target="_blank" rel="noopener noreferrer" class="font-sans text-body hover:text-ink text-xs transition-colors">GitHub</a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="font-sans text-body hover:text-ink text-xs transition-colors">LinkedIn</a>
+        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="font-sans text-body hover:text-ink text-xs transition-colors">Twitter / X</a>
+        <a href="mailto:mohammedsuhailll123@gmail.com" class="font-sans text-body hover:text-ink text-xs transition-colors">Email</a>
+      </div>
+
+      <!-- Architecture Detail Column -->
+      <div class="flex flex-col gap-3">
+        <span class="caption-mono text-mute text-[10px] font-bold tracking-wider">Architecture</span>
+        <div class="flex items-center gap-1.5 font-mono text-[10px] text-body">
+          <span class="w-1.5 h-1.5 rounded-full bg-orange-500"></span>
+          <span>Astro static generation</span>
+        </div>
+        <div class="flex items-center gap-1.5 font-mono text-[10px] text-body">
+          <span class="w-1.5 h-1.5 rounded-full bg-teal-400"></span>
+          <span>Tailwind CSS v4 engine</span>
+        </div>
+        <div class="flex items-center gap-1.5 font-mono text-[10px] text-body">
+          <span class="w-1.5 h-1.5 rounded-full bg-black"></span>
+          <span>Deploy ready to Vercel</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Copyright and details -->
+    <div class="flex flex-col sm:flex-row items-center justify-between border-t border-hairline pt-8 gap-4">
+      <span class="font-sans text-mute text-xs">
+        &copy; 2026 All Rights Reserved.
+      </span>
+      <div class="flex items-center gap-1">
+        <span class="font-mono text-[10px] text-mute">Powered by</span>
+        <a 
+          href="https://astro.build" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="font-mono text-[10px] text-body hover:text-link transition-colors underline decoration-dotted"
+        >
+          Astro
+        </a>
+      </div>
+    </div>
+
+  </div>
+</footer>

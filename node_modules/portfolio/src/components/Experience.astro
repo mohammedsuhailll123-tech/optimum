@@ -1,0 +1,115 @@
+---
+// Experience.astro
+const milestones = [
+  {
+    title: "Responsive Web Engineering",
+    subtitle: "Design & Development",
+    description: "Design and develop responsive business websites, modern landing pages, and interactive portfolios tailored to client goals. Ensure seamless rendering across mobile, tablet, and desktop viewports.",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" /></svg>`,
+    tech: ["Responsive Design", "UI/UX Layouts", "Astro", "Tailwind CSS"]
+  },
+  {
+    title: "Modern Stack Architectures",
+    subtitle: "Astro & Supabase Integration",
+    description: "Build robust, database-driven functionalities using Astro, Tailwind CSS, JavaScript (ES6+), and TypeScript. Integrate secure backend services, user authentication, and data layers via Supabase.",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" /></svg>`,
+    tech: ["Astro Components", "Supabase DB", "TypeScript", "REST APIs"]
+  },
+  {
+    title: "Edge Deployments & Hosting",
+    subtitle: "Vercel & Git Workflows",
+    description: "Manage deployment pipelines and site hosting utilizing Vercel and Netlify. Implement automated version control workflows via Git and GitHub to ensure instant updates and reliable rollbacks.",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 16.5V9.75m0 0 3 3m-3-3-3 3M6.75 19.5a4.5 4.5 0 0 1-1.41-8.775 5.25 5.25 0 0 1 10.233-2.33 3 3 0 0 1 3.758 3.848A3.752 3.752 0 0 1 18 19.5H6.75Z" /></svg>`,
+    tech: ["Vercel Hosting", "Git Workflows", "CI/CD", "GitHub"]
+  },
+  {
+    title: "Performance & SEO Analytics",
+    subtitle: "Speed & Index Optimization",
+    description: "Optimize web core vitals to achieve fast loading times and perfect Lighthouse audit scores. Setup custom metadata, site structures, and schema indexing to boost search engine rankings.",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.94-2.281m5.94 2.28-2.28 5.941" /></svg>`,
+    tech: ["Lighthouse Optimization", "Core Web Vitals", "SEO Keywords", "Caching"]
+  },
+  {
+    title: "Continuous Synthesis",
+    subtitle: "Technology Advancement",
+    description: "Continuously research, test, and implement emerging web capabilities. Maintain an active learning cycle in modern rendering paradigms, layout modules, and web standards to benefit client solutions.",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" /></svg>`,
+    tech: ["Emerging Specs", "Web API Research", "Skill Growth"]
+  }
+];
+---
+
+<section id="experience" class="py-24 bg-primary text-on-primary border-b border-white/10 relative overflow-hidden">
+  
+  <!-- Subtle ambient glow in dark background -->
+  <div class="absolute inset-0 pointer-events-none opacity-10 select-none">
+    <div class="absolute bottom-0 right-0 w-96 h-96 rounded-full bg-gradient-preview-end/40 blur-3xl"></div>
+  </div>
+
+  <div class="max-w-[1400px] mx-auto px-4 md:px-6 relative z-10">
+    
+    <!-- Role Header Block -->
+    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 border-b border-white/10 pb-10 mb-16">
+      <div class="max-w-[700px]">
+        <p class="caption-mono text-gradient-develop-end mb-3 tracking-widest font-semibold">Timeline</p>
+        <h2 class="display-lg text-3xl md:text-4xl text-on-primary leading-tight mb-2">
+          Freelance Web Developer.
+        </h2>
+        <p class="font-sans text-white/70 text-base md:text-lg">
+          Designing, building, and deploying fast, responsive web systems directly for businesses and individuals.
+        </p>
+      </div>
+      <div class="shrink-0 flex items-center gap-3 bg-white/5 border border-white/10 rounded-sm p-4 hover:border-white/20 transition-colors">
+        <span class="relative flex h-3 w-3">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-gradient-develop-end opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-3 w-3 bg-gradient-develop-start"></span>
+        </span>
+        <span class="font-mono text-sm tracking-wider font-bold">2026 — PRESENT</span>
+      </div>
+    </div>
+
+    <!-- Vertical Timeline Grid -->
+    <div class="relative border-l border-white/10 ml-4 md:ml-8 pl-8 md:pl-12 space-y-12 max-w-[900px]">
+      
+      {milestones.map((milestone) => (
+        <div class="relative group">
+          
+          <!-- Timeline Bullet Node with Icon -->
+          <div class="absolute -left-[49px] md:-left-[57px] top-0.5 flex items-center justify-center bg-primary border border-white/10 text-white rounded-full w-9 h-9 md:w-10 md:h-10 group-hover:border-white/40 group-hover:text-gradient-develop-end transition-all duration-300 shadow-lg">
+            <Fragment set:html={milestone.icon} />
+          </div>
+
+          <!-- Content Card -->
+          <div class="bg-white/5 border border-white/5 hover:border-white/15 rounded-lg p-6 md:p-8 transition-all duration-300 shadow-level-3 hover:translate-x-1">
+            
+            <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 mb-3">
+              <h3 class="text-white font-sans text-lg md:text-xl font-semibold group-hover:text-gradient-develop-end transition-colors">
+                {milestone.title}
+              </h3>
+              <span class="caption-mono text-white/40 text-[10px] tracking-wider">
+                {milestone.subtitle}
+              </span>
+            </div>
+
+            <p class="font-sans text-white/70 text-xs sm:text-sm leading-relaxed mb-6">
+              {milestone.description}
+            </p>
+
+            <!-- Tags -->
+            <div class="flex flex-wrap gap-1.5 pt-4 border-t border-white/5">
+              {milestone.tech.map((skill) => (
+                <span class="font-mono text-[9px] text-white/60 bg-white/5 border border-white/10 px-2 py-0.5 rounded-sm">
+                  {skill}
+                </span>
+              ))}
+            </div>
+
+          </div>
+
+        </div>
+      ))}
+
+    </div>
+
+  </div>
+</section>

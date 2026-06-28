@@ -1,0 +1,135 @@
+---
+// Skills.astro
+const skillGroups = [
+  {
+    category: "Frontend",
+    description: "Building responsive, layout-rich, and interactive browser interfaces.",
+    skills: [
+      { name: "HTML5", percentage: 95, color: "from-orange-500 to-amber-500" },
+      { name: "CSS3", percentage: 90, color: "from-blue-500 to-indigo-500" },
+      { name: "Tailwind CSS", percentage: 95, color: "from-teal-400 to-cyan-500" },
+      { name: "JavaScript (ES6+)", percentage: 92, color: "from-yellow-400 to-amber-500" },
+      { name: "TypeScript", percentage: 88, color: "from-blue-600 to-indigo-600" },
+      { name: "Astro", percentage: 90, color: "from-orange-500 to-rose-500" }
+    ]
+  },
+  {
+    category: "Backend",
+    description: "Designing database integrations, authentication routes, and data flows.",
+    skills: [
+      { name: "Supabase", percentage: 82, color: "from-emerald-400 to-teal-500" },
+      { name: "REST APIs", percentage: 88, color: "from-purple-500 to-pink-500" },
+      { name: "Authentication", percentage: 80, color: "from-red-500 to-rose-500" },
+      { name: "Database Integration", percentage: 85, color: "from-blue-700 to-cyan-700" }
+    ]
+  },
+  {
+    category: "Tools & Deploy",
+    description: "Version control systems, editors, design assets, and edge hosting.",
+    skills: [
+      { name: "Git", percentage: 90, color: "from-orange-600 to-red-600" },
+      { name: "GitHub", percentage: 90, color: "from-neutral-800 to-neutral-950" },
+      { name: "VS Code", percentage: 95, color: "from-blue-500 to-sky-600" },
+      { name: "Vercel", percentage: 90, color: "from-black to-neutral-700" },
+      { name: "Figma (Basic)", percentage: 60, color: "from-pink-500 to-purple-500" }
+    ]
+  },
+  {
+    category: "Professional Skills",
+    description: "Critical product engineering practices, optimization, and communication.",
+    skills: [
+      { name: "Responsive Web Design", percentage: 98, color: "from-teal-500 to-emerald-500" },
+      { name: "UI/UX Design", percentage: 82, color: "from-indigo-500 to-purple-500" },
+      { name: "SEO Optimization", percentage: 90, color: "from-cyan-500 to-blue-500" },
+      { name: "Performance Optimization", percentage: 92, color: "from-amber-500 to-orange-500" },
+      { name: "Problem Solving", percentage: 90, color: "from-red-500 to-rose-500" },
+      { name: "Communication", percentage: 88, color: "from-blue-600 to-indigo-600" },
+      { name: "Client Support", percentage: 90, color: "from-emerald-500 to-green-600" }
+    ]
+  }
+];
+---
+
+<section id="skills" class="py-24 bg-canvas-soft border-b border-hairline relative">
+  <div class="max-w-[1400px] mx-auto px-4 md:px-6">
+    
+    <!-- Section Header -->
+    <div class="max-w-[700px] mb-16">
+      <p class="caption-mono text-link mb-3 tracking-widest font-semibold">Capabilities</p>
+      <h2 class="display-lg text-3xl md:text-4xl text-ink leading-tight mb-4">
+        Skills & Proficiency.
+      </h2>
+      <p class="font-sans text-body text-base md:text-lg">
+        Categorized technical stack with direct proficiency indicators. Hover over the cards to highlight technical stats.
+      </p>
+    </div>
+
+    <!-- Skills Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      {skillGroups.map((group) => (
+        <div class="bg-canvas border border-hairline rounded-lg p-6 sm:p-8 shadow-level-2 hover:shadow-level-3 hover:border-hairline-strong/30 transition-all duration-300 group flex flex-col justify-between">
+          
+          <!-- Group Header -->
+          <div class="mb-6">
+            <h3 class="display-sm text-lg md:text-xl text-ink font-semibold mb-2 group-hover:text-link transition-colors">
+              {group.category}
+            </h3>
+            <p class="font-sans text-body text-xs sm:text-sm leading-relaxed">
+              {group.description}
+            </p>
+          </div>
+
+          <!-- Progress bars list -->
+          <div class="space-y-4">
+            {group.skills.map((skill) => (
+              <div class="space-y-1.5 group/item">
+                
+                <!-- Label & percentage -->
+                <div class="flex items-center justify-between text-xs">
+                  <span class="font-sans font-semibold text-ink group-hover/item:text-primary transition-colors">
+                    {skill.name}
+                  </span>
+                  <span class="font-mono text-mute font-bold">
+                    {skill.percentage}%
+                  </span>
+                </div>
+
+                <!-- Progress Bar Track -->
+                <div class="h-2 bg-canvas-soft-2 border border-hairline/60 rounded-full overflow-hidden w-full relative">
+                  <!-- Filled Bar with gradient -->
+                  <div 
+                    class={`h-full bg-gradient-to-r ${skill.color} rounded-full transition-all duration-1000 ease-out origin-left`} 
+                    style={`width: ${skill.percentage}%`}
+                  >
+                    <!-- Glowing cursor node -->
+                    <span class="absolute top-0 right-0 w-2 h-full bg-white/20 animate-pulse"></span>
+                  </div>
+                </div>
+
+              </div>
+            ))}
+          </div>
+
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>
+
+<style>
+  /* Custom anim rules if progress bars animate on view */
+  @keyframes loadBar {
+    from {
+      transform: scaleX(0);
+    }
+    to {
+      transform: scaleX(1);
+    }
+  }
+
+  .origin-left {
+    transform-origin: left;
+    animation: loadBar 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+</style>

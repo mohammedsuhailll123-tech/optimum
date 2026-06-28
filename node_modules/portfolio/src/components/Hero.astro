@@ -1,0 +1,79 @@
+---
+// Hero.astro
+---
+
+<section class="relative w-full overflow-hidden bg-canvas py-24 lg:py-36 border-b border-hairline">
+  
+  <!-- Ambient Mesh Gradient Blur Circles -->
+  <div class="absolute inset-0 z-0 pointer-events-none opacity-40 select-none">
+    <!-- Blue/Teal Blob -->
+    <div class="absolute -top-12 -left-20 w-80 h-80 md:w-120 md:h-120 rounded-full bg-gradient-develop-end/30 blur-3xl animate-float-1"></div>
+    <!-- Violet/Pink Blob -->
+    <div class="absolute top-1/4 left-1/3 w-72 h-72 md:w-96 md:h-96 rounded-full bg-gradient-preview-start/20 blur-3xl animate-float-2"></div>
+    <!-- Amber/Red Blob -->
+    <div class="absolute -top-20 right-10 w-80 h-80 md:w-100 md:h-100 rounded-full bg-gradient-ship-start/25 blur-3xl animate-float-1"></div>
+  </div>
+
+  <div class="relative z-10 max-w-[1400px] mx-auto px-4 md:px-6 flex flex-col items-center text-center">
+    
+    <!-- Super Header -->
+    <div class="inline-flex items-center gap-1.5 bg-canvas-soft border border-hairline hover:border-hairline-strong rounded-full px-3.5 py-1 mb-8 shadow-sm">
+      <span class="w-1.5 h-1.5 rounded-full bg-gradient-develop-end animate-pulse"></span>
+      <span class="caption-mono text-body text-[10px] sm:text-xs font-semibold tracking-wider">
+        👋 Welcome to suhailll.dev
+      </span>
+    </div>
+
+    <!-- Stark Headline -->
+    <h1 class="display-xl text-4xl sm:text-5xl md:text-6xl max-w-[850px] font-sans font-semibold text-ink leading-tight tracking-tight mb-6">
+      Mohammed Suhail<span class="text-gradient-develop-start">.</span>
+    </h1>
+
+    <!-- Subtitle/Lead Paragraph -->
+    <p class="font-sans text-body text-base sm:text-lg md:text-xl max-w-[750px] font-normal leading-relaxed mb-10 text-body/90">
+      Full Stack Web Developer specializing in modern, responsive, and SEO-friendly websites using Astro, Tailwind CSS, JavaScript, TypeScript, and Supabase. I build high-performance websites that help businesses establish a strong online presence and grow digitally.
+    </p>
+
+    <!-- CTAs -->
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto mb-16">
+      <a 
+        href="#projects" 
+        class="inline-flex items-center justify-center bg-primary text-on-primary hover:bg-primary/95 text-base font-semibold rounded-full px-8 py-3.5 transition-all w-full sm:w-auto hover:scale-[1.02] shadow-level-3 active:scale-[0.98]"
+      >
+        View My Projects
+      </a>
+      <a 
+        href="#contact" 
+        class="inline-flex items-center justify-center bg-canvas hover:bg-canvas-soft-2 text-ink text-base font-semibold rounded-full border border-hairline px-8 py-3.5 transition-all w-full sm:w-auto hover:scale-[1.02] shadow-level-2 active:scale-[0.98]"
+      >
+        Get in Touch
+      </a>
+    </div>
+
+    <!-- Stats Grid -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 w-full max-w-[900px] border-t border-hairline pt-10">
+      
+      <div class="flex flex-col items-center p-4 rounded-md bg-canvas/30 backdrop-blur-sm border border-hairline/55 shadow-level-1 hover:border-hairline-strong/30 transition-all">
+        <span class="font-mono text-3xl font-bold tracking-tight text-ink">1+</span>
+        <span class="caption-mono text-mute text-[10px] mt-1 tracking-wider">Live Project</span>
+      </div>
+
+      <div class="flex flex-col items-center p-4 rounded-md bg-canvas/30 backdrop-blur-sm border border-hairline/55 shadow-level-1 hover:border-hairline-strong/30 transition-all">
+        <span class="font-mono text-3xl font-bold tracking-tight text-ink">100%</span>
+        <span class="caption-mono text-mute text-[10px] mt-1 tracking-wider">Responsive Websites</span>
+      </div>
+
+      <div class="flex flex-col items-center p-4 rounded-md bg-canvas/30 backdrop-blur-sm border border-hairline/55 shadow-level-1 hover:border-hairline-strong/30 transition-all">
+        <span class="font-mono text-3xl font-bold tracking-tight text-ink">100%</span>
+        <span class="caption-mono text-mute text-[10px] mt-1 tracking-wider">Client Focus</span>
+      </div>
+
+      <div class="flex flex-col items-center p-4 rounded-md bg-canvas/30 backdrop-blur-sm border border-hairline/55 shadow-level-1 hover:border-hairline-strong/30 transition-all">
+        <span class="font-mono text-3xl font-bold tracking-tight text-ink">∞</span>
+        <span class="caption-mono text-mute text-[10px] mt-1 tracking-wider">Continuous Learning</span>
+      </div>
+
+    </div>
+
+  </div>
+</section>
